@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      form {
+        width: 50%;
+        margin: auto;
+        padding: 50px;
+        border: 1px solid gray;
+        border-radius: 5px;
+        text-align: center;
+      }
+      input[type="text"], input[type="password"] {
+        padding: 10px;
+        margin: 10px 0;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid gray;
+      }
+      input[type="submit"] {
+        padding: 10px 20px;
+        background-color: lightblue;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .error {
+        color: red;
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <form onsubmit="return validateForm()">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username">
+      <br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+    <p class="error" id="error"></p>
+    <script>
+      function validateForm() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var error = document.getElementById("error");
+        error.inner
